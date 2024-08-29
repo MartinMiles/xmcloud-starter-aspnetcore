@@ -33,6 +33,10 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
 
+    defaults:
+      run:
+        working-directory: headapps
+
   deploy:
     runs-on: windows-latest
     needs: build
